@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://mqjlemlulngl"]
+
+[ext_resource type="Script" uid="uid://b08mx1g2xudi7" path="res://scenes/UndeadSorcererProjectile.gd" id="1_ofi01"]
+[ext_resource type="Texture2D" uid="uid://c0nk7vn2p2ias" path="res://sprites/Fireorb.png" id="2_ofi01"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6n1a"]
+size = Vector2(21, 23)
+
+[node name="UndeadSorcererProjectile" type="Area2D" unique_id=782867190]
+script = ExtResource("1_ofi01")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1726252566]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_m6n1a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=407999179]
+position = Vector2(-0.9999995, 0)
+scale = Vector2(1.2421875, 1.2421875)
+texture = ExtResource("2_ofi01")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

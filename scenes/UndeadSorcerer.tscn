@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bwro173dcbaay"]
+
+[ext_resource type="Script" uid="uid://bpa8yqhl7sjcf" path="res://scenes/UndeadSorcerer.gd" id="1_nokgg"]
+[ext_resource type="Texture2D" uid="uid://cfkv130p4yoix" path="res://sprites/Undead Sorcerer.png" id="2_nokgg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p11y5"]
+radius = 29.0
+height = 100.0
+
+[node name="UndeadSorcerer" type="Area2D" unique_id=1428644799 groups=["mob"]]
+script = ExtResource("1_nokgg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=471406479]
+texture = ExtResource("2_nokgg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=668502341]
+position = Vector2(0, 13)
+shape = SubResource("CapsuleShape2D_p11y5")
