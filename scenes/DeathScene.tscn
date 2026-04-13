@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://jdcw64i33k3j"]
+
+[ext_resource type="Script" uid="uid://cs56jyahxm0n1" path="res://scenes/DeathScene.gd" id="1_6brm5"]
+[ext_resource type="FontFile" uid="uid://lmy0w71h3pcc" path="res://Fonts/nintendo-nes-font.otf" id="2_4ski7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qrqu"]
+bg_color = Color(0.6, 0.6, 0.6, 0.19607843)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.7058824, 0.54901963, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=648085993]
+script = ExtResource("1_6brm5")
+
+[node name="FadeRect" type="ColorRect" parent="." unique_id=1452296121]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.011764706, 0.011764706, 0.011764706, 0)
+
+[node name="PerishedLabel" type="Label" parent="." unique_id=443680883]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -43.0
+offset_right = 51.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_4ski7")
+theme_override_font_sizes/font_size = 28
+text = "YOU PERISHED"
+
+[node name="TextBox" type="Panel" parent="." unique_id=224414077]
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 108.0
+offset_top = -239.0
+offset_right = 108.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.8, 1.0000012)
+theme_override_styles/panel = SubResource("StyleBoxFlat_0qrqu")
+
+[node name="TypedLabel" type="Label" parent="TextBox" unique_id=1074402973]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.249998
+offset_top = 22.999971
+offset_right = -25.75
+offset_bottom = -22.00003
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_4ski7")
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 2
+
+[node name="RetryButton" type="Button" parent="." unique_id=2113592253]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = 13.0
+offset_right = 28.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_4ski7")
+text = "RETRY
+"
