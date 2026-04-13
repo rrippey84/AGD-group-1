@@ -11,12 +11,20 @@ config_version=5
 [application]
 
 config/name="Drago"
+run/main_scene="uid://d21jkdsdt8ncc"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
+GameFlow="*res://scripts/game_flow.gd"
+
+[display]
+
+window/size/viewport_width=1200
+window/size/viewport_height=780
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 

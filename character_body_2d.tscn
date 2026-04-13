@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ux8wnsuwiee7"]
+
+[ext_resource type="Script" uid="uid://r5coview8akj" path="res://character_body_2d.gd" id="1_ij6vw"]
+[ext_resource type="Texture2D" uid="uid://cvyn8g3uu7k7w" path="res://Assets/dragon_player.png" id="2_ghijl"]
+
+[node name="Cutscene_character_1" type="Node2D" unique_id=1011832193]
+script = ExtResource("1_ij6vw")
+metadata/_edit_horizontal_guides_ = [6.0, 1748.0]
+metadata/_edit_vertical_guides_ = [2703.0, -8.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=506039283]
+position = Vector2(110.99997, 82.00003)
+scale = Vector2(0.42519683, 0.42519686)
+texture = ExtResource("2_ghijl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1023715420]
+offset_left = 74.0
+offset_top = 53.0
+offset_right = 146.0
+offset_bottom = 106.0
+color = Color(0, 0, 0, 0.003921569)
