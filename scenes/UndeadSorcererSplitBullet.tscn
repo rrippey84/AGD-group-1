@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cvuuvc40o76h1"]
 
-[ext_resource type="Script" uid="uid://t6hvs1n3h3k4" path="res://scenes/UndeadSorcererSplitBullet.gd" id="1_s0ynj"]
-[ext_resource type="Texture2D" uid="uid://b5elqctrnu7y6" path="res://sprites/Fireball.png" id="2_ni73q"]
+[ext_resource type="Script" uid="uid://c0olhdnhbqrp4" path="res://scenes/UndeadSorcererSplitBullet.gd" id="1_s0ynj"]
+[ext_resource type="Texture2D" uid="uid://b5elqctrnu7y6" path="res://Assets/FireSplit.png" id="2_ni73q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i11b6"]
 

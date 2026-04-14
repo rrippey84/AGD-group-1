@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://mqjlemlulngl"]
 
-[ext_resource type="Script" uid="uid://b08mx1g2xudi7" path="res://scenes/UndeadSorcererProjectile.gd" id="1_ofi01"]
-[ext_resource type="Texture2D" uid="uid://c0nk7vn2p2ias" path="res://sprites/Fireorb.png" id="2_ofi01"]
+[ext_resource type="Script" uid="uid://bqqg4w5rixnv0" path="res://scenes/UndeadSorcererProjectile.gd" id="1_ofi01"]
+[ext_resource type="Texture2D" uid="uid://c0nk7vn2p2ias" path="res://Assets/Fireorb.png" id="2_ofi01"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m6n1a"]
 size = Vector2(21, 23)
