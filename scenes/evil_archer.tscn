@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cf2b1mhu4mdtn"]
+
+[ext_resource type="Script" uid="uid://chtxgsp8ypkfu" path="res://scenes/evil_archer.gd" id="1_d470s"]
+[ext_resource type="Texture2D" uid="uid://cavq8eg6088r3" path="res://sprites/EvilArcher.png" id="2_rso6m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ogvi7"]
+radius = 25.0
+height = 122.0
+
+[node name="EvilArcher" type="Area2D" unique_id=870634888]
+script = ExtResource("1_d470s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1229507105]
+position = Vector2(9, 1)
+scale = Vector2(1.9609375, 1.9609375)
+texture = ExtResource("2_rso6m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1504996752 groups=["mob"]]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_ogvi7")
