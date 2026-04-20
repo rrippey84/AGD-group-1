@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cqi5fpwuenkam"]
+
+[ext_resource type="Script" uid="uid://x0m6f3m5hde5" path="res://lava_hazard.gd" id="1_0v8ds"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghcfn"]
+size = Vector2(98, 84)
+
+[node name="LavaHazard" type="Area2D" unique_id=73858874]
+script = ExtResource("1_0v8ds")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1336930620]
+shape = SubResource("RectangleShape2D_ghcfn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

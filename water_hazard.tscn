@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dwsi8fl4f00vr"]
+
+[ext_resource type="Script" uid="uid://ubtqctvyysk" path="res://water_hazard.gd" id="1_pqxyf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pqxyf"]
+size = Vector2(604, 466)
+
+[node name="WaterHazard" type="Area2D" unique_id=472000192]
+script = ExtResource("1_pqxyf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=823215472]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_pqxyf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
