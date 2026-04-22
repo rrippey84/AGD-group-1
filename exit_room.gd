@@ -1,7 +1,6 @@
 extends Area2D
-
+@export var next_screen : PackedScene
+# Called when the node enters the scene tree for the first time.
 func _on_body_entered(body):
 	if body.is_in_group("player"):
-		# check if all mobs are dead before advancing
-		if get_tree().get_nodes_in_group("mob").size() == 0:
-			GameFlow.go_to_next_level()
+		get_tree().change_scene_to_packed(next_screen)
