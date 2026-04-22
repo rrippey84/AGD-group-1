@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfkv130p4yoix"
-path="res://.godot/imported/Undead Sorcerer.png-ab0535b9660710030523b5ff42a50525.ctex"
+uid="uid://bjsie3c1ocj52"
+path="res://.godot/imported/EvilArcher.png-ff6d634f9c53b9dd5a0ad9b45a575685.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Undead Sorcerer.png"
-dest_files=["res://.godot/imported/Undead Sorcerer.png-ab0535b9660710030523b5ff42a50525.ctex"]
+source_file="res://Assets/EvilArcher.png"
+dest_files=["res://.godot/imported/EvilArcher.png-ff6d634f9c53b9dd5a0ad9b45a575685.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cf2b1mhu4mdtn"]
 
-[ext_resource type="Script" uid="uid://chtxgsp8ypkfu" path="res://scenes/evil_archer.gd" id="1_d470s"]
-[ext_resource type="Texture2D" uid="uid://cavq8eg6088r3" path="res://sprites/EvilArcher.png" id="2_rso6m"]
+[ext_resource type="Script" uid="uid://dlnwwx2sf3j58" path="res://scenes/evil_archer.gd" id="1_d470s"]
+[ext_resource type="Texture2D" uid="uid://bjsie3c1ocj52" path="res://Assets/EvilArcher.png" id="2_rso6m"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ogvi7"]
 radius = 25.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfkv130p4yoix"
-path="res://.godot/imported/Undead Sorcerer.png-ab0535b9660710030523b5ff42a50525.ctex"
+uid="uid://rb7v231h1s65"
+path="res://.godot/imported/NPC.png-4ff54a36b4770b24eb7358255e70a3a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Undead Sorcerer.png"
-dest_files=["res://.godot/imported/Undead Sorcerer.png-ab0535b9660710030523b5ff42a50525.ctex"]
+source_file="res://scenes/NPC.png"
+dest_files=["res://.godot/imported/NPC.png-4ff54a36b4770b24eb7358255e70a3a1.ctex"]
 
 [params]
 

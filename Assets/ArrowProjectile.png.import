@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfkv130p4yoix"
-path="res://.godot/imported/Undead Sorcerer.png-ab0535b9660710030523b5ff42a50525.ctex"
+uid="uid://cyrp268udmylv"
+path="res://.godot/imported/ArrowProjectile.png-a01e4a785d23897dac7404a8edb368ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Undead Sorcerer.png"
-dest_files=["res://.godot/imported/Undead Sorcerer.png-ab0535b9660710030523b5ff42a50525.ctex"]
+source_file="res://Assets/ArrowProjectile.png"
+dest_files=["res://.godot/imported/ArrowProjectile.png-a01e4a785d23897dac7404a8edb368ca.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://trew0xrcsxv3"]
 
-[ext_resource type="Texture2D" uid="uid://bd6256dh6tbmj" path="res://sprites/ArrowProjectile.png" id="1_kd5qf"]
-[ext_resource type="Script" uid="uid://c5s8hq3ovaas0" path="res://scenes/arrow_projectile.gd" id="1_qweb0"]
+[ext_resource type="Texture2D" uid="uid://cyrp268udmylv" path="res://Assets/ArrowProjectile.png" id="1_kd5qf"]
+[ext_resource type="Script" uid="uid://c0s0s2nqpe3nd" path="res://scenes/arrow_projectile.gd" id="1_qweb0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qweb0"]
 radius = 2.0
