@@ -1,6 +1,10 @@
-[gd_scene load_steps=4 format=4 uid="uid://bsu43jp8vgssx"]
+[gd_scene load_steps=10 format=4 uid="uid://bsu43jp8vgssx"]
 
 [ext_resource type="Texture2D" uid="uid://b6g80hr20e2mn" path="res://Assets/Class_Tileset (2).png" id="1_hghux"]
+[ext_resource type="PackedScene" uid="uid://dwsi8fl4f00vr" path="res://water_hazard.tscn" id="2_qhk3t"]
+[ext_resource type="Script" path="res://exit_room.gd" id="3_q1pxe"]
+[ext_resource type="PackedScene" uid="uid://dcryvg5lmxpgg" path="res://Kegan_outside2.tscn" id="4_evbw6"]
+[ext_resource type="Script" path="res://exit_room1.gd" id="5_8reqm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i162v"]
 texture = ExtResource("1_hghux")
@@ -85,6 +89,12 @@ texture_region_size = Vector2i(160, 160)
 tile_size = Vector2i(160, 160)
 sources/0 = SubResource("TileSetAtlasSource_i162v")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mugo"]
+size = Vector2(163.163, 1678.92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qgkuc"]
+size = Vector2(113.696, 702.935)
+
 [node name="TileMapLayer" type="TileMapLayer"]
 position = Vector2(75, 0)
 scale = Vector2(0.368, 0.368)
@@ -95,3 +105,28 @@ tile_set = SubResource("TileSet_xujd1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(0, 110, 960, 110, 960, 690, 1072, 800, 1600, 800, 1600, 690, 1170, 690, 1070, 590, 1070, 110, 2610, 110, 2609, 588, 2721, 588, 2720, 2, 0, 0, -1, 1762, 2720, 1760, 2720, 1169, 2609, 1169, 2610, 1650, 2080, 1650, 2080, 800, 1970, 800, 1970, 1649, 0, 1650)
+
+[node name="WaterHazard" parent="." instance=ExtResource("2_qhk3t")]
+position = Vector2(-796.196, 649.457)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="WaterHazard"]
+position = Vector2(796.196, -649.457)
+polygon = PackedVector2Array(366.848, 921.196, 472.826, 831.522, 589.674, 902.174, 603.261, 997.283, 826.087, 1002.72, 904.891, 1070.65, 932.065, 1152.17, 1168.48, 1168.48, 1236.41, 1260.87, 1241.85, 1728.26, 845.109, 1698.37, 839.674, 1565.22, 717.391, 1524.46, 671.196, 1399.46, 440.217, 1394.02, 364.13, 1293.48)
+
+[node name="Exit Room" type="Area2D" parent="."]
+script = ExtResource("3_q1pxe")
+next_screen = ExtResource("4_evbw6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit Room"]
+position = Vector2(-51.6304, 875)
+shape = SubResource("RectangleShape2D_7mugo")
+
+[node name="enter" type="Marker2D" parent="Exit Room"]
+position = Vector2(184.783, 847.826)
+
+[node name="Exit Room2" type="Area2D" parent="."]
+script = ExtResource("5_8reqm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit Room2"]
+position = Vector2(2709.02, 899.456)
+shape = SubResource("RectangleShape2D_qgkuc")

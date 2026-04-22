@@ -1,6 +1,10 @@
-[gd_scene load_steps=4 format=4 uid="uid://b275i5xp67ylx"]
+[gd_scene load_steps=11 format=4 uid="uid://b275i5xp67ylx"]
 
 [ext_resource type="Texture2D" uid="uid://b6g80hr20e2mn" path="res://Assets/Class_Tileset (2).png" id="1_884ru"]
+[ext_resource type="PackedScene" uid="uid://8ywuvd31qw2a" path="res://lava_hazard.tscn" id="2_u2sn1"]
+[ext_resource type="Script" path="res://exit_room.gd" id="3_4kv0w"]
+[ext_resource type="PackedScene" uid="uid://dpfr0ad5lqsny" path="res://Kegan_lava_cavern4.tscn" id="4_rlwoq"]
+[ext_resource type="Script" path="res://exit_room1.gd" id="5_gckq5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_50fxr"]
 texture = ExtResource("1_884ru")
@@ -85,6 +89,14 @@ texture_region_size = Vector2i(160, 160)
 tile_size = Vector2i(160, 160)
 sources/0 = SubResource("TileSetAtlasSource_50fxr")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kuwec"]
+size = Vector2(464.674, 94.6739)
+
+[sub_resource type="PackedScene" id="PackedScene_fmoqk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_np05t"]
+size = Vector2(113.791, 925.272)
+
 [node name="TileMapLayer" type="TileMapLayer"]
 position = Vector2(75, 0)
 scale = Vector2(0.368, 0.368)
@@ -95,3 +107,38 @@ tile_set = SubResource("TileSet_i26my")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 polygon = PackedVector2Array(112, 111, 2190, 110, 2190, 0, 0, 0, -1, 1762, 2720, 1760, 2720, 0, 2610, 0, 2609.39, 1650, 2, 1649, 0, 800, 111, 799)
+
+[node name="LavaHazard" parent="." instance=ExtResource("2_u2sn1")]
+position = Vector2(-380.435, 0)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LavaHazard"]
+polygon = PackedVector2Array(1154.89, 353.261, 1366.85, 358.696, 1461.96, 459.239, 1464.67, 654.891, 1358.7, 769.022, 1157.61, 769.022, 1054.35, 660.326, 1057.07, 453.804)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LavaHazard"]
+polygon = PackedVector2Array(1480.98, 994.565, 1527.17, 994.565, 1625, 1097.83, 1625, 1141.3, 1527.17, 1244.57, 1475.54, 1244.57, 1375, 1141.3, 1375, 1097.83)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LavaHazard"]
+polygon = PackedVector2Array(2116.85, 355.978, 2163.04, 355.978, 2263.59, 456.522, 2266.3, 502.717, 2165.76, 605.978, 2114.13, 603.261, 2013.59, 502.717, 2016.3, 453.804)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="LavaHazard"]
+polygon = PackedVector2Array(2274.46, 1000, 2480.98, 997.283, 2586.96, 1100.54, 2586.96, 1152.17, 2644.02, 1157.61, 2744.57, 1260.87, 2744.57, 1464.67, 2644.02, 1562.5, 2437.5, 1562.5, 2334.24, 1461.96, 2334.24, 1407.61, 2274.46, 1407.61, 2173.91, 1301.63, 2173.91, 1097.83)
+
+[node name="Exit Room" type="Area2D" parent="."]
+script = ExtResource("3_4kv0w")
+next_screen = ExtResource("4_rlwoq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit Room"]
+position = Vector2(2419.84, 47.7717)
+shape = SubResource("RectangleShape2D_kuwec")
+
+[node name="Exit Room_L" type="Area2D" parent="."]
+position = Vector2(2717.39, 1271.74)
+script = ExtResource("5_gckq5")
+next_screen = SubResource("PackedScene_fmoqk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit Room_L"]
+position = Vector2(-2720.11, -57.0652)
+shape = SubResource("RectangleShape2D_np05t")
+
+[node name="enter" type="Marker2D" parent="."]
+position = Vector2(168.478, 1239.13)
